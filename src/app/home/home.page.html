@@ -1,20 +1,153 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<body class="all">
+  
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen="true">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-card>
+      <ion-content class="header">
+          <ion-label position="floating">ID  DEL POKEMON</ion-label>
+          <ion-item class="bus">
+              <ion-input [(ngModel)]="pokemonId" type="number"> </ion-input>
+          </ion-item>
+          <ion-button expand="full" (click)="getPokemonDataID(pokemonId)" color="danger">
+            BUSCAR
+            <ion-icon slot="end" name="search"></ion-icon>
+          </ion-button>
+          
+      </ion-content>
+  
+  <ion-grid class="resp">
+      <ion-row>
+          <ion-col size="12" >
+            <ion-card>
+             <ion-card-header>
+              {{pokemon.name}}
+             </ion-card-header>
+             <ion-content>
+              {{pokemon.id}}
+             </ion-content>
+            </ion-card>
+          </ion-col>
+      </ion-row>
+      <ion-grid>
+          <ion-img [src]="pokemon.sprites.front_default"></ion-img>
+      </ion-grid>
+  </ion-grid>
+  </ion-card>
+  
+  
+  
+  
+  
+
+  <ion-card>
+      <ion-content class="header">
+          <ion-label position="floating">NOMBRE  DEL POKEMON</ion-label>
+          <ion-item class="bus">
+              <ion-input [(ngModel)]="pokemonName" type="string"> </ion-input>
+          </ion-item>
+          <ion-button expand="full" (click)="getPokemonDataName(pokemonName)" color="danger">
+            BUSCAR
+            <ion-icon slot="end" name="search"></ion-icon>
+          </ion-button>
+          
+      </ion-content>
+  
+  <ion-grid class="resp">
+      <ion-row>
+          <ion-col size="12" >
+            <ion-card>
+             <ion-card-header>
+              {{pokemon2.id}}
+             </ion-card-header>
+             <ion-content>
+              {{pokemon2.name}}
+             </ion-content>
+            </ion-card>
+          </ion-col>
+      </ion-row>
+      <ion-grid>
+          <ion-img [src]="pokemon2.sprites.front_default"></ion-img>
+      </ion-grid>
+  </ion-grid>
+  </ion-card>
+
+
+
+
+
+
+  <ion-card>
+    <ion-content class="header">
+        <ion-label position="floating">ID  DEL OBJETO</ion-label>
+        <ion-item class="bus">
+            <ion-input [(ngModel)]="itemId" type="number"> </ion-input>
+        </ion-item>
+        <ion-button expand="full" (click)="getItemDataID(itemId)" color="danger">
+          BUSCAR
+          <ion-icon slot="end" name="search"></ion-icon>
+        </ion-button>
+        
+    </ion-content>
+
+<ion-grid class="resp">
+    <ion-row>
+        <ion-col size="12" >
+          <ion-card>
+           <ion-card-header>
+            {{pokemon3.name}}
+           </ion-card-header>
+           <ion-content>
+            {{pokemon3.id}}
+           </ion-content>
+          </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-grid>
+        <ion-img [src]="pokemon3.sprites.default"></ion-img>
+    </ion-grid>
+</ion-grid>
+</ion-card>
+
+
+
+
+
+<ion-card>
+    <ion-content class="header">
+        <ion-label position="floating">NOMBRE DEL OBJETO</ion-label>
+        <ion-item class="bus">
+            <ion-input [(ngModel)]="itemName" type="string"> </ion-input>
+        </ion-item>
+        <ion-button expand="full" (click)="getItemDataName(itemName)" color="danger">
+          BUSCAR
+          <ion-icon slot="end" name="search"></ion-icon>
+        </ion-button>
+        
+    </ion-content>
+
+<ion-grid class="resp">
+    <ion-row>
+        <ion-col size="12" >
+          <ion-card>
+           <ion-card-header>
+            {{pokemon4.id}}
+           </ion-card-header>
+           <ion-content>
+            {{pokemon4.name}}
+           </ion-content>
+          </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-grid>
+        <ion-img [src]="pokemon4.sprites.default"></ion-img>
+    </ion-grid>
+</ion-grid>
+</ion-card>
+
+
+
+
+  </ion-content>
+
+</body>
